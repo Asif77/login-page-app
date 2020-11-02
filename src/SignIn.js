@@ -114,7 +114,7 @@ export default function SignIn(props) {
 				const pos = returnUrl.indexOf(returnParamString);
 				returnUrl = pos >= 0 ? returnUrl.substring(pos + returnParamString.length + 1) : returnUrl;
 				returnUrl = decodeURI(returnUrl);
-				const qs = returnUrl.replace('SID=~', `SID=${result.data}`);
+				const qs = returnUrl.replace('SID=~', `SID=${result.data.Info}`);
 				const formAccessPath = '/UltWeb/';
 				const redirectUrl = `${formAccessPath}${qs}`;
 				console.log('redirectUrl: ', redirectUrl);
